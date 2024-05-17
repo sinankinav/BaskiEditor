@@ -1,0 +1,12 @@
+<div>
+    <h2>Baskı Editorü</h2>
+    <div class="canvas" #canvas>
+      <div *ngFor="let item of items" [ngStyle]="getItemStyle(item)" (mousedown)="startDrag($event, item)">
+        <img *ngIf="item.type === 'image'" [src]="item.src" [style.width.px]="item.width" [style.height.px]="item.height">
+        <div *ngIf="item.type === 'text'" [ngStyle]="getTextStyle(item)">
+          {{ item.content }}
+        </div>
+      </div>
+    </div>
+  </div>
+  

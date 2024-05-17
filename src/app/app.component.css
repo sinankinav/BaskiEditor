@@ -1,13 +1,18 @@
 .editor-container {
   display: flex;
 }
+
 app-controls {
- width: 30%; 
+  width: 30%;
   padding: 10px;
 }
+
 app-canvas {
   width: 70%;
   border-left: 1px solid #ccc;
   padding: 10px;
 }
-* { background: #f5f7fa;}
+
+* {
+  background: #f5f7fa;
+}
