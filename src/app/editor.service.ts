@@ -1,26 +1,20 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class EditorService {
+  private selectedItemSource = new BehaviorSubject<any>(null);
+  selectedItem$ = this.selectedItemSource.asObservable();
+
   private items: any[] = [];
-  private selectedItemSubject = new BehaviorSubject<any>(null);
-  selectedItem$ = this.selectedItemSubject.asObservable();
 
-  constructor() {}
-
-  getItems() {
-    return this.items;
-  }
+  constructor(private http: HttpClient) { }
 
   addItem(item: any) {
     this.items.push(item);
-  }
-
-  setSelectedItem(item: any) {
-    this.selectedItemSubject.next(item);
   }
 
   updateItemPosition(item: any, x: number, y: number) {
@@ -28,7 +22,27 @@ export class EditorService {
     if (index !== -1) {
       this.items[index].x = x;
       this.items[index].y = y;
-      this.setSelectedItem(this.items[index]);
     }
+  }
+
+  postItems() {
+    const url = 'https://pusulaweb.com.tr/api/editor';
+    this.http.post(url, this.items).subscribe(
+      response => {
+        console.log('POST başarılı:', response);
+      },
+      error => {
+        console.error('POST hatası:', error);
+      }
+    );
+  }
+
+  // Yeni işlevleri ekleyin
+  getItems() {
+    return this.items;
+  }
+
+  setSelectedItem(item: any) {
+    this.selectedItemSource.next(item);
   }
 }

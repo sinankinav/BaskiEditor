@@ -63,4 +63,7 @@ export class CanvasComponent implements OnInit {
     document.removeEventListener('mouseup', this.endDrag);
     this.selectedItem = null;
   }
+  onSelectItem(item: any) {
+    this.editorService.setSelectedItem(item); // Seçilen öğeyi servise bildirin
+  }
 }

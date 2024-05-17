@@ -7,16 +7,17 @@ import { AppComponent } from './app.component';
 import { ControlsComponent } from './controls/controls.component';
 import { CanvasComponent } from './canvas/canvas.component';
 import {MatIconModule} from '@angular/material/icon'
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
     ControlsComponent,
-    CanvasComponent
+    CanvasComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule, NgIconsModule.withIcons({  heroUsers }),
-    ReactiveFormsModule ,MatIconModule
+    ReactiveFormsModule ,MatIconModule,HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

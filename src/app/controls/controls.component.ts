@@ -52,9 +52,24 @@ export class ControlsComponent {
     }
   }
 
+  onInputTypeChange() {
+    // Girdi türü değiştiğinde yapılacak işlemler
+    if (this.inputType === 'text') {
+      // Text input alanlarını göster
+      this.showTextInputs();
+    } else if (this.inputType === 'image') {
+      // Image input alanlarını göster
+      this.showImageInputs();
+    }
+  }
 
+  showTextInputs() {
+    // Metin input alanlarını gösterme işlemleri
+  }
 
- 
+  showImageInputs() {
+    // Görsel input alanlarını gösterme işlemleri
+  }
 
   addText() {
     const newItem = {
@@ -65,7 +80,6 @@ export class ControlsComponent {
       bold: this.bold,
       italic: this.italic,
       underline: this.underline,
-      
       x: 0,
       y: 0
     };
@@ -90,11 +104,14 @@ export class ControlsComponent {
       reader.readAsDataURL(file);
     }
   }
-  
 
   updateSelectedItemPosition() {
     if (this.selectedItem) {
       this.editorService.updateItemPosition(this.selectedItem, this.customWidth, this.customHeight);
     }
+  }
+
+  postItems() {
+    this.editorService.postItems();
   }
 }
