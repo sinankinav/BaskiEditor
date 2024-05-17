@@ -1,27 +1,71 @@
-# BaskiEditor
+markdown
+Kodu kopyala
+# Baskı Ayarları Uygulaması
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.0.
+Bu proje, kullanıcıların farklı kağıt tiplerini seçebildiği, metin veya görsel ekleyebildiği ve bu öğeleri düzenleyebildiği bir baskı ayarları uygulamasıdır.
 
-## Development server
+## Özellikler
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Kağıt Tipi Seçimi: A3, A4, A5 veya özel boyut.
+- Metin Girişi: Yazı tipi, boyutu, kalın, italik ve altı çizili özelliklerini ayarlayabilme.
+- Görsel Yükleme: Kullanıcılar görsel yükleyebilir ve düzenleme alanına ekleyebilir.
+- Öğelerin Pozisyonunu Güncelleme: Seçilen öğenin X ve Y koordinatlarını değiştirebilme.
 
-## Code scaffolding
+## Gereksinimler
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Bu projeyi çalıştırmak için aşağıdaki yazılımların sisteminizde kurulu olması gerekmektedir:
 
-## Build
+- [Node.js](https://nodejs.org/) (>= 12.0.0)
+- [Angular CLI](https://angular.io/cli) (>= 10.0.0)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Kurulum
 
-## Running unit tests
+Aşağıdaki adımları takip ederek projeyi yerel ortamınıza kurabilirsiniz:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. Bu repoyu klonlayın:
 
-## Running end-to-end tests
+    ```sh
+    git clone https://github.com/kullaniciadi/baski-ayarlar-uygulamasi.git
+    ```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+2. Proje dizinine gidin:
 
-## Further help
+    ```sh
+    cd baski-ayarlar-uygulamasi
+    ```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+3. Gerekli bağımlılıkları yükleyin:
+
+    ```sh
+    npm install
+    ```
+
+## Projeyi Çalıştırma
+
+Projeyi geliştirme modunda çalıştırmak için:
+
+```sh
+ng serve
+Tarayıcınızda http://localhost:4200 adresine giderek uygulamayı görüntüleyebilirsiniz. Uygulama herhangi bir dosyada değişiklik yaptığınızda otomatik olarak yeniden yüklenecektir.
+
+Yapı
+
+Projeyi üretim için derlemek ve optimize etmek için:
+
+sh
+Kodu kopyala
+ng build
+Derleme çıktıları dist/ dizinine kaydedilecektir. Bu çıktılar üretim ortamında kullanıma hazırdır.
+
+Katkıda Bulunma
+
+Eğer projeye katkıda bulunmak isterseniz, lütfen önce bir issue açarak neyi değiştirmek istediğinizi tartışalım. Büyük değişiklikler için, lütfen önce neyi değiştirmek istediğinizi tartışmak üzere bir konu açınız.
+
+Lisans
+
+Bu proje MIT Lisansı ile lisanslanmıştır.
+
+css
+Kodu kopyala
+
+Bu README dosyası, projenizin ne olduğunu, nasıl kurulacağını ve nasıl çalıştırılacağını açıkça belirtiyor. Ayrıca, katkıda bulunma sürecini ve lisans bilgisini de içeriyor. Gerekli bilgileri kendi projenize göre özelleştirebilirsiniz.
