@@ -1,5 +1,4 @@
-markdown
-Kodu kopyala
+
 # Baskı Ayarları Uygulaması
 
 Bu proje, kullanıcıların farklı kağıt tiplerini seçebildiği, metin veya görsel ekleyebildiği ve bu öğeleri düzenleyebildiği bir baskı ayarları uygulamasıdır.
