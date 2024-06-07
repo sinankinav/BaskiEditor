@@ -52,7 +52,7 @@ Yapı
 Projeyi üretim için derlemek ve optimize etmek için:
 
 sh
-Kodu kopyala
+
 ng build
 Derleme çıktıları dist/ dizinine kaydedilecektir. Bu çıktılar üretim ortamında kullanıma hazırdır.
 
@@ -65,6 +65,6 @@ Lisans
 Bu proje MIT Lisansı ile lisanslanmıştır.
 
 css
-Kodu kopyala
+
 
 Bu README dosyası, projenizin ne olduğunu, nasıl kurulacağını ve nasıl çalıştırılacağını açıkça belirtiyor. Ayrıca, katkıda bulunma sürecini ve lisans bilgisini de içeriyor. Gerekli bilgileri kendi projenize göre özelleştirebilirsiniz.
